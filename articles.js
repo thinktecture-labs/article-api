@@ -66,48 +66,48 @@ module.exports = [{
   category: "bekleidung",
   subcategory: "hosen",
   title: "Jeans No. 490",
-  manufactorer: "Jovis",
+  manufacturer: "Jovis",
   price: 64.99
 }, {
   id: 11,
   category: "bekleidung",
   subcategory: "hosen",
   title: "Jeans No. 520",
-  manufactorer: "Jovis",
+  manufacturer: "Jovis",
   price: 69.99
 }, {
   id: 12,
   category: "bekleidung",
   subcategory: "hosen",
   title: "Jeans No. 570",
-  manufactorer: "Jovis",
+  manufacturer: "Jovis",
   price: 69.99
 }, {
   id: 13,
   category: "bekleidung",
   subcategory: "pullover",
   title: "Pullover lachsrot",
-  manufactorer: "Magroste",
+  manufacturer: "Magroste",
   price: 89.99
 }, {
   id: 14,
   category: "bekleidung",
   subcategory: "pullover",
   title: "Pullover lavendel",
-  manufactorer: "Magroste",
+  manufacturer: "Magroste",
   price: 89.99
 }, {
   id: 15,
   category: "bekleidung",
   subcategory: "pullover",
   title: "Pullover lila",
-  manufactorer: "Magroste",
+  manufacturer: "Magroste",
   price: 89.99
 }, {
   id: 16,
   category: "bekleidung",
   subcategory: "pullover",
   title: "Pullover grau-meliert",
-  manufactorer: "Jake & Bones",
+  manufacturer: "Jake & Bones",
   price: 69.99
 }];

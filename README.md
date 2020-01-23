@@ -6,5 +6,5 @@ This is a sample API for demoing read-only data access including lookups.
 
 ```sh
 npm i
-node index.js
+node server.js
 ```

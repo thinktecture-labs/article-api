@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "BSD-3-Clause",
-  "devDependencies": {
+  "dependencies": {
     "restify": "^8.5.1"
   }
 }

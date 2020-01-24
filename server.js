@@ -1,4 +1,5 @@
 const restify = require('restify'),
+  errors = require('restify-errors'),
   categories = require('./categories'),
   articles = require('./articles');
 const port = process.env.PORT || 8080;
@@ -10,13 +11,13 @@ server.get('/articles', (req, res, next) => {
 });
 
 server.get('/articles/:id', (req, res, next) => {
-  const article = articles.find(a => a.id === req.params.id);
+  const article = articles.find(a => a.id === +req.params.id);
   if (article) {
     res.send(article);
     return next();
   }
 
-  next(new restify.errors.NotFoundError('Article not found'));
+  next(new errors.NotFoundError('Article not found'));
 });
 
 server.get('/categories', (req, res, next) => {

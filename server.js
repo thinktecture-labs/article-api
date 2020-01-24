@@ -14,13 +14,26 @@ server.get('/articles', (req, res, next) => {
 });
 
 server.get('/articles/:id', (req, res, next) => {
-  const article = articles.find(a => a.id === +req.params.id);
-  if (article) {
-    res.send(article);
-    return next();
+  const articleIndex = articles.findIndex(a => a.id === +req.params.id);
+  if (articleIndex === -1) {
+    next(new errors.NotFoundError('Article not found'));
+    return;
   }
 
-  next(new errors.NotFoundError('Article not found'));
+  const article = articles[articleIndex];
+  const previousArticle = articles[articleIndex - 1];
+  const nextArticle = articles[articleIndex + 1];
+
+  if (previousArticle) {
+    article.previousId = previousArticle.id;
+  }
+
+  if (nextArticle) {
+    article.nextId = nextArticle.id;
+  }
+
+  res.send(article);
+  next();
 });
 
 server.get('/categories', (req, res, next) => {

@@ -5,8 +5,11 @@ const restify = require('restify'),
 const port = process.env.PORT || 8080;
 
 const server = restify.createServer();
+server.use(restify.plugins.queryParser());
+
 server.get('/articles', (req, res, next) => {
-  res.send(articles);
+  const query = req.query.q;
+  res.send(query ? articles.filter(article => article.title.toLowerCase().includes(query.toLowerCase())) : articles);
   next();
 });
 
